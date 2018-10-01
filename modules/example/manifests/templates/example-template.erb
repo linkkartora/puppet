@@ -1,0 +1,8 @@
+This is an example template.
+Facts in this template, they are @ipaddress, @hostname
+This nodes hostname os <%= @hostname %>
+Interfaces on this machine:
+<% @interfaces.split(',').each do |interface| -%>
+    Interface is <%= interface %>
+<% end -%>
+Thank you.
