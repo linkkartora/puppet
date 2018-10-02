@@ -1,5 +1,4 @@
-class dockers::buildnginx {
-    #saving to local dockerFile in oder to apply docker image build
+#saving to local dockerFile in oder to apply docker image build
     file { '/tmp/Dockerfile.nginx':
       source => '/tmp/nginx.Dockerfile',
       notify => Docker::Image['pbg-nginx'],
@@ -15,4 +14,3 @@ class dockers::buildnginx {
      ports => ['8080:8080'],
      pull_on_start => true,
     }
-}

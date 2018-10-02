@@ -1,4 +1,3 @@
-class docker::buildandrun {
   docker::image { 'test-hello':
    docker_file => '/tmp/hello.Dockerfile',
    ensure => latest,
@@ -8,4 +7,3 @@ class docker::buildandrun {
   docker::run { 'test-hello':
    image => 'test-hello',
   }
-}
